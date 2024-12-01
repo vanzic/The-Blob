@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  position: absolute;
+}
+
+#toggleButton {
+  transition: transform 0.3s ease; 
+}
+
+#toggleButton:hover {
+  transform: scale(1.05);
+}
+
+#toggleButton.shake {
+animation: shake 0.5s ease infinite;
+}
+
+
+#toggleButton.shake {
+  animation: shake 0.5s ease 1;
+}
+
+#toggleButton1.shake {
+  animation: shake 0.5s ease 1;
+}
+
+
+@keyframes shake {
+  0% { transform: translate(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translate(0); }
+}
+
+
+#toggleButton1.active {
+  background-color: #4caf50;
+  transition: background-color 0.3s ease;
+}
+
+#toggleButton1 {
+  background-color: #f44336;
+  transition: background-color 0.3s ease;
+}
+
+
+/* Loading overlay styles */
+#loadingOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1d1d1d, #4a4a4a);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  z-index: 200; /* Ensure it's above other content */
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Progress bar styles */
+#progressBar {
+  width: 80%;
+  height: 20px;
+  background-color: #555;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#progress {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #4caf50, #81c784);
+  transition: width 0.2s ease-in-out;
+  border-radius: 10px;
+}
+
+/* Loading text animation */
+#loadingText {
+  animation: fadeIn 1s ease-in-out infinite alternate;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0.7; }
+  100% { opacity: 1; }
+}

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Blob</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div id="loadingOverlay">
+      <div id="loadingText">Loading...</div>
+      <div id="progressBar">
+        <div id="progress"></div>
+      </div>
+    </div> <!-- Loading overlay -->
+
+    <canvas id="canvas" class="w-full h-screen"></canvas>
+
+    <!-- Button to toggle orbit controls -->
+    <div class="absolute w-full p-3 text-white z-100 flex justify-center items-center">
+      <div id="toggleButton" class="top-2 left-2 bg-zinc-100 p-[2px] rounded-full flex items-center justify-center" >
+        <button id="toggleButton1" class="bg-zinc-900 text-white text-xl font-semibold pt-3 pb-3 pl-8 pr-8 rounded-full">
+          Toggle Orbit Controls
+        </button>
+      </div>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
